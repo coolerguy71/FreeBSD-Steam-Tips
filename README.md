@@ -21,6 +21,8 @@ RUN_DEPENDS=    7zz:archivers/7-zip \
                 xdg-open:devel/xdg-utils \
                 zenity:x11/zenity
 ```
+Then, run ```make install```!
+
 3. After all of that we want to install wine-proton ```pkg install wine-proton``` (Makes games a ton faster compared to base wine)
 
 4. Make sure you install the 32 bit versions of both wine and proton ```/usr/local/wine-proton/bin/pkg32.sh install wine-proton wine-devel mesa-dri``` (Don't worry about the "/" at the start if you are 
