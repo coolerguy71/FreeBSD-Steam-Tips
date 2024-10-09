@@ -1,0 +1,15 @@
+DownloadSite=https://cdn.cloudflare.steamstatic.com/client/installer/
+
+DownloadFile=SteamSetup.exe
+
+Winetricks=corefonts
+
+DXVK=Yes
+
+VKD3D_Proton=Yes
+
+Game=Yes
+
+EXE=drive_c/Program Files (x86)/Steam/steam.exe
+
+ARGS=-cef-disable-sandbox -cef-disable-gpu-compositing -cef-in-process-gpu
