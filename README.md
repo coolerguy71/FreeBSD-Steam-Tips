@@ -3,7 +3,7 @@ Just a FreeBSD repo dedicated to giving tips about Steam on FreeBSD
 
 
 ## Intro
-Short and simple, FreeBSD is currently limited to a March build of Steam because of a steamwebhelper thingy... so uncool
+Short and simple, FreeBSD is currently limited to a March build of Steam because of a steamwebhelper thingy... so uncool.
 However I can't get into specifics but I found a workaround on how ya can get the latest build of Steam running on FreeBSD. Yay!
 
 * You'll need to reboot a lot btw!
@@ -12,9 +12,16 @@ However I can't get into specifics but I found a workaround on how ya can get th
 
 1. So start by installing the dev branch of wine with ```pkg install wine-devel```
 
-2. After that make sure to install Mizuma, a cool wine frontend ```pkg install mizuma```
+2. After that make sure to install Mizuma, a cool wine frontend (we actually need to build this from ports to avoid dependency clashes, and modify the Makefile). First, do ```cd /usr/ports/games/mizuma``` and then do ```ee Makefile```. Once you are in the Makefile, navigate to ```RUN_DEPENDS=``` and then remove wine and wine-mono as dependencies, as shown below:
 
-3. After allat we want to install wine-proton ```pkg install wine-proton``` (Makes games a ton faster compared to base wine)
+RUN_DEPENDS=    7zz:archivers/7-zip \
+                bash:shells/bash \
+                vulkaninfo:graphics/vulkan-tools \
+                winetricks:emulators/winetricks \
+                xdg-open:devel/xdg-utils \
+                zenity:x11/zenity
+
+3. After all of that we want to install wine-proton ```pkg install wine-proton``` (Makes games a ton faster compared to base wine)
 
 4. Make sure you install the 32 bit versions of both wine and proton ```/usr/local/wine-proton/bin/pkg32.sh install wine-proton wine-devel mesa-dri``` (Don't worry about the "/" at the start if you are 
 unfamiliar, just copy this exactly into your terminal!)
