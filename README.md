@@ -13,8 +13,8 @@ However I can't get into specifics but I found a workaround on how ya can get th
 1. So start by installing the dev branch of wine with ```pkg install wine-devel```
 
 2. After that make sure to install Mizuma, a cool wine frontend (we actually need to build this from ports to avoid dependency clashes, and modify the Makefile). First, do ```cd /usr/ports/games/mizuma``` and then do ```ee Makefile```. Once you are in the Makefile, navigate to ```RUN_DEPENDS=``` and then remove wine and wine-mono as dependencies, as shown below:
-
-```RUN_DEPENDS=    7zz:archivers/7-zip \
+```
+RUN_DEPENDS=    7zz:archivers/7-zip \
                 bash:shells/bash \
                 vulkaninfo:graphics/vulkan-tools \
                 winetricks:emulators/winetricks \
