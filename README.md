@@ -27,11 +27,11 @@ unfamiliar, just copy this exactly into your terminal!)
 
 7. It's time to start installing Steam! Now, open Mizuma, navigate to Installation, then scroll until you find Steam. Go through all of the options, and when steam goes past "Extracting Update" and the window closes, reboot. 
 
-8. Open Mizuma again, click on Steam another time, wait around 10 seconds, (to make sure the wine-devel configuration bakes in well) and then reboot.
+8. Open Mizuma again, click on Launcher < Steam, wait around 10 seconds, (to make sure the wine-devel configuration bakes in well) and then reboot.
 
 9. Time to start modifying Steam to use Proton. Now, go to Other < Edit configuration file again, and now at the final line, chance /usr/local/bin to be /usr/local/wine-proton/bin. Then, open Steam, and reboot once again!
 
-10.Now, let's open Steam, and we should have success. We should see the Steam login prompt. Hope you found this tutorial useful!
+10.Now, let's open Steam yet again, and we should have success. We should see the Steam login prompt. Hope you found this tutorial useful!
 
 ## Epilogue
 
