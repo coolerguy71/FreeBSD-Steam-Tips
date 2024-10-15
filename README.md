@@ -40,7 +40,9 @@ unfamiliar, just copy this exactly into your terminal!)
 
 9. Time to start modifying Steam to use Proton. Now, go to Other < Edit configuration file again, and now at the final line, chance /usr/local/bin to be /usr/local/wine-proton/bin. Then, open Steam, and reboot once again!
 
-10.Now, let's open Steam yet again, and we should have success. We should see the Steam login prompt. Hope you found this tutorial useful!
+10. We'll need to adjust pulseaudio to work with Proton in this prefix! Run: ```WINEPREFIX=~/.local/share/Mizutamari/Games/Steam WINE=/usr/local/wine-proton/bin/wine winetricks sound=pulse``` this will set the sound to use pulseaudio, so we can hear things in our games.
+
+11.Now, let's open Steam yet again, and we should have success. We should see the Steam login prompt. Hope you found this tutorial useful!
 
 ## Epilogue
 
