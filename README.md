@@ -6,7 +6,7 @@ Just a FreeBSD repo dedicated to giving tips about Steam on FreeBSD
 Short and simple, FreeBSD is currently limited to a March build of Steam because of a steamwebhelper thingy... so uncool.
 However I can't get into specifics but I found a workaround on how ya can get the latest build of Steam running on FreeBSD. Yay!
 
-* You'll need to reboot a lot btw!
+~~* You'll need to reboot a lot btw!~~ Is what I would have said if Alexander wouldn't have suggested a better solution.
 
 ### Software you'll need:
 
@@ -34,11 +34,11 @@ unfamiliar, just copy this exactly into your terminal!)
 
 6. Now we need to replace a file in our Mizuma library, so download this file: ```fetch https://raw.githubusercontent.com/coolerguy71/FreeBSD-Steam-Tips/main/Steam``` and then go to the directory ~/.local/share/Mizutamari/Library and copy the file you downloaded into this folder. 
 
-7. It's time to start installing Steam! Now, open Mizuma, navigate to Installation, then scroll until you find Steam. Go through all of the options, and when steam goes past "Extracting Update" and the window closes, reboot. 
+7. It's time to start installing Steam! Now, open Mizuma, navigate to Installation, then scroll until you find Steam. Go through all of the options, and when steam goes past "Extracting Update" and the window closes, click on Kill Wine in the Mizuma menu. 
 
-8. Open Mizuma again, click on Launcher < Steam, wait around 10 seconds, (to make sure the wine-devel configuration bakes in well) and then reboot.
+8. Open Mizuma again, click on Launcher < Steam, wait around 10 seconds, (to make sure the wine-devel configuration bakes in well) and then kill Wine.
 
-9. Time to start modifying Steam to use Proton. Now, go to Other < Edit configuration file again, and now at the final line, chance /usr/local/bin to be /usr/local/wine-proton/bin. Then, open Steam, and reboot once again!
+9. Time to start modifying Steam to use Proton. Now, go to Other < Edit configuration file again, and now at the final line, chance /usr/local/bin to be /usr/local/wine-proton/bin. Then, open Steam, and kill Wine once again!
 
 10. We'll need to adjust pulseaudio to work with Proton in this prefix! Run: ```WINEPREFIX=~/.local/share/Mizutamari/Games/Steam WINE=/usr/local/wine-proton/bin/wine winetricks sound=pulse``` this will set the sound to use pulseaudio, so we can hear things in our games.
 
